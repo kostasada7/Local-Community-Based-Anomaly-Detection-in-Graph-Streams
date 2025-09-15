@@ -71,5 +71,4 @@ def Dynamic_anchor_community(G,edg,edges_n,C, graph_df,anchor,a,data=True):
           edg[0] += -edg[0]
           C=find_anchor_community(G,C,a,data=True)          
           y +=1
-    print(res)    
-    print(y)       
+    
