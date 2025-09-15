@@ -17,7 +17,8 @@ nx.set_edge_attributes(G, values = 1, name = 'weight')
 G = nx.from_pandas_edgelist(res,'node1', 'node2')
 nx.write_edgelist(G, "graph0-edgelist.txt", data=False)
 nx.write_gexf(G, "Gephi.gexf")
-anchor=491
+# USE THE SEED (ANCHOR) YOU WANT. NOW I USE ANCHOR = 0
+anchor=0
 edg=[0]
 edges_n=[0]
 
@@ -26,14 +27,5 @@ G.add_node(anchor)
 C=[[anchor],[0],[0],[0]]
 Dynamic_anchor_community(G,edg,edges_n,C, graph_df,anchor,a,data=True)
 C=find_anchor_community(G,C,a,data=True)
-f=open('communities_set_1.txt','a')
-  #f.write(str(graph_df.loc[i,"Iter"]))
-  #f.write(' ')
-f.write(str(C[0])[1 : -1])
-f.close() 
-nx.write_edgelist(G, "graph1-edgelist.txt", data=True)
-nx.write_gexf(G, "Gephi1.gexf")
-end = time.time()
-print("Elapsed time is  {}".format(end-start))
+
 print(G)
-                    
