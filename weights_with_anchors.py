@@ -152,5 +152,7 @@ def negative_weight(G,edg,edges_n,C,graph_df,i,anchor,a,data=True):
                  C[1].pop(C[0].index(z))
                  C[2].pop(C[0].index(z))
                  C[3].pop(C[0].index(z))
-                 C[0].remove(z) 
+                 C[0].remove(z)
+    C[0] = [int(x) for x in C[0]]
+    print(C[0])             
     return C
