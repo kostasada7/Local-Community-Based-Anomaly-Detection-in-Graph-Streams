@@ -1,6 +1,6 @@
 import pandas as pd
 import networkx as nx
-from Seed_set_expansion11 import Dynamic_anchor_community
+from Seed_set_expansion import Dynamic_anchor_community
 import time
 from anchor_seed1 import find_anchor_community
  
@@ -29,3 +29,4 @@ Dynamic_anchor_community(G,edg,edges_n,C, graph_df,anchor,a,data=True)
 C=find_anchor_community(G,C,a,data=True)
 
 print(G)
+
