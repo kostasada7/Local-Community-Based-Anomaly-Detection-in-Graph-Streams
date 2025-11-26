@@ -1,4 +1,4 @@
-from anchor_seed1 import find_anchor_community
+from anchor_seed import find_anchor_community
 from weights_with_anchors import positive_weight, negative_weight
 from BestBFS import neighbors_in_depth
 import os
@@ -72,4 +72,5 @@ def Dynamic_anchor_community(G,edg,edges_n,C, graph_df,anchor,a,data=True):
           C=find_anchor_community(G,C,a,data=True)          
           y +=1
     
+
 
